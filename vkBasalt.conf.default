@@ -1,0 +1,13 @@
+effects = dls
+
+#dlsSharpness specifies the amount of sharpening in the Denoised Luma Sharpening shader.
+#Increase to sharpen details within the image.
+#0.0 less sharp, less artefacts, but not off
+#1.0 maximum sharp more artefacts
+dlsSharpness = 0.5
+
+#dlsDenoise specifies the amount of denoising in the Denoised Luma Sharpening shader.
+#Increase to limit how intensely film grain within the image gets sharpened.
+#0.0 min
+#1.0 max
+dlsDenoise = 0.17
