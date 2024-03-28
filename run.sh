@@ -47,7 +47,7 @@ fn_create_conf_vkbasalt() {
 		# duplicate parameters will (have to) be removed
 		for i in ${PATH_SHADERS}/Merged/Shaders/*.fx; do
 			echo -e "\n#$(basename $i)\n";
-			echo -e "$(basename ${i} | sed 's/\.[^.]*$//') = $PATH_SCRIPT/shaders/Merged/Shaders/$(basename $i)\n";
+			echo -e "$(basename ${i} | sed 's/\.[^.]*$//') = ${PATH_SHADERS}/Merged/Shaders/$(basename $i)\n";
 
 			echo $(grep -E "(uniform\s*(float|bool|int)|^>)" ${i}) | sed 's/\s*;\s*/\n/g' | \
 		        awk '$NF ~/^[0-9]+(\.[0-9])*|true|false$/ {print $3" = "$NF}' | \
